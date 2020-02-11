@@ -1,0 +1,34 @@
+﻿@model IdentityPOC.Common.Models.UserLogin
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_External.cshtml";
+}
+
+
+<div class="container">
+    <div class="card card-container">
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form class="form-signin" asp-controller="External" asp-action="Login" method="post">
+        <span id="reauth-email" class="reauth-email"></span>
+        <input asp-for="Usercode" type="text" id="inputEmail" class="form-control input-validation-error" placeholder="User Code">
+        <span asp-validation-for="Usercode" class="text-danger"></span>
+        <input asp-for="Password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+    </form>
+        <a href="#" class="forgot-password">
+            Forgot the password?
+        </a>
+    </div><!-- /card-container -->
+</div><!-- /container -->
+
+<style>
+    .input-validation-error {
+        border-color: red;
+    }
+</style>
+
+
