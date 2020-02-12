@@ -51,7 +51,6 @@ namespace IdentityPOC.Security
             var claims = new List<Claim>()
             {
                 new Claim("Username", login.Username),
-                new Claim("Password", login.Password)
             };
 
             return claims;
