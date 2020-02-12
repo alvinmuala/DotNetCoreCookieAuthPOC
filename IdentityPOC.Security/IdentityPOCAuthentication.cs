@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Security.Claims;
-using IdentityPOC.Common.Models;
+﻿using IdentityPOC.Common.Models;
+using IdentityPOC.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 
 namespace IdentityPOC.Security
 {
@@ -14,15 +16,21 @@ namespace IdentityPOC.Security
             await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
 
-        public static LoginResult Login(HttpContext context, UserLogin login)
+        public static LoginResult Login(ApplicationDbContext dbContext, HttpContext httpContext, UserLogin login)
         {
             var claims = GetClaims(login);
 
-            var user = string.Empty;
+            var user = dbContext.Logins
+                .FirstOrDefault(r => r.Username == login.Username && r.Password == login.Password);
 
-            if(user != null)
+            if(user == null)
             {
-                CreateIdentityAsync(context, claims);
+                return LoginResult.MemberNotFound;
+            }
+
+            if (user != null)
+            {
+                CreateIdentityAsync(httpContext, claims);
 
                 return LoginResult.Success;
             }
@@ -36,23 +44,24 @@ namespace IdentityPOC.Security
 
             var authProperties = new AuthenticationProperties();
 
-            await context.SignInAsync( CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+            await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
         }
         private static List<Claim> GetClaims(UserLogin login)
         {
             var claims = new List<Claim>()
             {
-                new Claim("Usercode", login.Usercode),
+                new Claim("Username", login.Username),
                 new Claim("Password", login.Password)
             };
 
             return claims;
-        }        
+        }
 
     }
 
     public enum LoginResult
     {
+        MemberNotFound,
         Success,
         Failed
     }

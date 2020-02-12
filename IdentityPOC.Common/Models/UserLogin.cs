@@ -8,9 +8,9 @@ namespace IdentityPOC.Common.Models
         public Guid Id { get; set; }
 
         [Required]
-        [Display(Name = "Usercode")]
-        [StringLength(6, ErrorMessage = "User Code length can't be more than 6 characters long")]
-        public string Usercode { get; set; }
+        [Display(Name = "Username")]
+        [StringLength(12, ErrorMessage = "User name length can't be more than 12 characters long")]
+        public string Username { get; set; }
         [Required]
         [DataType(DataType.Password)]
 

@@ -5,12 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\IdentityPOC.Common\IdentityPOC.Common.csproj" />
-    <ProjectReference Include="..\IdentityPOC.Data\IdentityPOC.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,12 +12,19 @@
 
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <form class="form-signin" asp-controller="External" asp-action="Login" method="post">
-        <span id="reauth-email" class="reauth-email"></span>
-        <input asp-for="Usercode" type="text" id="inputEmail" class="form-control input-validation-error" placeholder="User Code">
-        <span asp-validation-for="Usercode" class="text-danger"></span>
+        <input asp-for="Username" type="text" id="inputEmail" class="form-control input-validation-error" placeholder="Username">
+        <span asp-validation-for="Username" class="text-danger"></span>
         <input asp-for="Password" type="password" id="inputPassword" class="form-control" placeholder="Password">
         <span asp-validation-for="Password" class="text-danger"></span>
         <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+
+        @if (ViewData.ContainsKey("Error"))
+        {
+            <div>
+                <span class="text-danger">@ViewData["Error"]</span>
+            </div>
+            <br />
+        }
     </form>
         <a href="#" class="forgot-password">
             Forgot the password?

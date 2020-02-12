@@ -1,5 +1,5 @@
+using IdentityPOC.Data;
 using IdentityPOC.Web;
-using IdentityPOC.Web.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

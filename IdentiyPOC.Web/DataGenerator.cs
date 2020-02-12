@@ -1,5 +1,5 @@
 ﻿using IdentityPOC.Common.Models;
-using IdentityPOC.Web.Data;
+using IdentityPOC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -21,15 +21,17 @@ namespace IdentityPOC.Web
                 context.Logins.AddRange(
                     new UserLogin
                     {
-                        Usercode = "280493",
+                        Username = "280493",
                         Password = "Password123$"
                     },
                     new UserLogin
                     {
-                        Usercode = "990115",
+                        Username = "990115",
                         Password = "Sunshine2020"
                     }
                 );
+
+                context.SaveChanges();
             }
         }
     }

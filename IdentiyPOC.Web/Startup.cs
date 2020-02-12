@@ -1,4 +1,4 @@
-using IdentityPOC.Web.Data;
+using IdentityPOC.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,7 +28,12 @@ namespace IdentityPOC
             services.AddControllersWithViews(options =>
                 options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(x => "The field is required.")
             );
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/External/Login";
+                    options.LogoutPath = "/External/SignOut";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +61,7 @@ namespace IdentityPOC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=External}/{action=Login}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
