@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityPOC.Web", "IdentityPOC.Web.csproj", "{381B7FA1-0431-45AF-811D-88A5C53F6C27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthCookiePOC.Web", "AuthCookiePOC.Web.csproj", "{381B7FA1-0431-45AF-811D-88A5C53F6C27}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityPOC.Security", "..\IdentityPOC.Security\IdentityPOC.Security.csproj", "{21A9139C-5203-4BF6-9B93-1D46DE36CFDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthCookiePOC.Security", "..\AuthCookiePOC.Security\AuthCookiePOC.Security.csproj", "{21A9139C-5203-4BF6-9B93-1D46DE36CFDB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityPOC.Common", "..\IdentityPOC.Common\IdentityPOC.Common.csproj", "{B9B3EFCF-F799-42F9-8D2D-9BCD693A4D8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthCookiePOC.Common", "..\AuthCookiePOC.Common\AuthCookiePOC.Common.csproj", "{B9B3EFCF-F799-42F9-8D2D-9BCD693A4D8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityPOC.Data", "..\IdentityPOC.Data\IdentityPOC.Data.csproj", "{9A326EF2-8552-4B5C-B835-9C8F1135BA9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthCookiePOC.Data", "..\AuthCookiePOC.Data\AuthCookiePOC.Data.csproj", "{9A326EF2-8552-4B5C-B835-9C8F1135BA9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

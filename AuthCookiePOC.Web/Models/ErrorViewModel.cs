@@ -1,6 +1,6 @@
 using System;
 
-namespace IdentityPOC.Web.Models
+namespace AuthCookiePOC.Web.Models
 {
     public class ErrorViewModel
     {

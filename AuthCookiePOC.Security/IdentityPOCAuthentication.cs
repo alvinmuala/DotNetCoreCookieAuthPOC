@@ -1,5 +1,5 @@
-﻿using IdentityPOC.Common.Models;
-using IdentityPOC.Data;
+﻿using AuthCookiePOC.Common.Models;
+using AuthCookiePOC.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 
-namespace IdentityPOC.Security
+namespace AuthCookiePOC.Security
 {
     public class IdentityPOCAuthentication
     {

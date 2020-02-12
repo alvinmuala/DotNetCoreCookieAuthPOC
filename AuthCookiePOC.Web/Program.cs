@@ -1,10 +1,10 @@
-using IdentityPOC.Data;
-using IdentityPOC.Web;
+using AuthCookiePOC.Data;
+using AuthCookiePOC.Web;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace IdentityPOC
+namespace AuthCookiePOC
 {
     public class Program
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace IdentityPOC.Common.Models
+namespace AuthCookiePOC.Common.Models
 {
     public class UserLogin
     {

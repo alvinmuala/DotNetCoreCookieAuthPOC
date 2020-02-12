@@ -1,10 +1,10 @@
-﻿using IdentityPOC.Web.Models;
+﻿using AuthCookiePOC.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
-namespace IdentityPOC.Web.Controllers
+namespace AuthCookiePOC.Web.Controllers
 {
     [Authorize]
     public class HomeController : Controller

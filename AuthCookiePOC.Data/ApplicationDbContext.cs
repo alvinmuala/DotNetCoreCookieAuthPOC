@@ -1,10 +1,10 @@
-﻿using IdentityPOC.Common.Models;
+﻿using AuthCookiePOC.Common.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace IdentityPOC.Data
+namespace AuthCookiePOC.Data
 {
     public class ApplicationDbContext : DbContext
     {

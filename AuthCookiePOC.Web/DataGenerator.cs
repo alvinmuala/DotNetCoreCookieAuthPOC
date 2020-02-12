@@ -1,11 +1,11 @@
-﻿using IdentityPOC.Common.Models;
-using IdentityPOC.Data;
+﻿using AuthCookiePOC.Common.Models;
+using AuthCookiePOC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 
-namespace IdentityPOC.Web
+namespace AuthCookiePOC.Web
 {
     public class DataGenerator
     {

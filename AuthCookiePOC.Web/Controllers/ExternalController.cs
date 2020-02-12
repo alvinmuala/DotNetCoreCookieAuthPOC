@@ -1,11 +1,10 @@
-﻿using IdentityPOC.Common.Models;
-using IdentityPOC.Data;
-using IdentityPOC.Security;
-using IdentityPOC.Web.Models;
+﻿using AuthCookiePOC.Common.Models;
+using AuthCookiePOC.Data;
+using AuthCookiePOC.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityPOC.Web.Controllers
+namespace AuthCookiePOC.Web.Controllers
 {
     [AllowAnonymous]
     public class ExternalController : Controller

@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityPOC.Common\IdentityPOC.Common.csproj" />
+    <ProjectReference Include="..\AuthCookiePOC.Common\AuthCookiePOC.Common.csproj" />
   </ItemGroup>
 
 </Project>
