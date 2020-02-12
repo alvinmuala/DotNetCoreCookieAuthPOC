@@ -1,4 +1,4 @@
-using IdentityPOC.Web;
+using IdentityPOC.Web.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,12 +22,8 @@ namespace IdentityPOC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //   options.UseSqlite(
-            //       Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("default"));
+                options.UseInMemoryDatabase(databaseName: "Auth"));
 
             services.AddControllersWithViews(options =>
                 options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(x => "The field is required.")
